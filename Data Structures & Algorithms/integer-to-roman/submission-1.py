@@ -8,9 +8,9 @@ class Solution:
         ]
 
         res = ''
-        for i, n in reversed(roman):
-            count = num // n
+        for sym, val in reversed(roman):
+            count = num // val
             if count:
-                res += i * count
-                num %= n
+                res += sym * count
+                num %= val
         return res
